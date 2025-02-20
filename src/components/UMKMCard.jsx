@@ -6,6 +6,7 @@ import {
   Phone,
   Mail,
   MessageCircle,
+  MapPinned,
 } from "lucide-react";
 import {
   Card,
@@ -128,19 +129,23 @@ export function UMKMCard({ umkm }) {
         </div>
       </CardContent>
       <CardFooter className="flex justify-between ">
-        <Button size="sm" asChild className="hover:text-green-400">
+        <Button size="sm" asChild className="hover:text-green-400" disbaled={Boolean(umkm.phone)}>
           <a href={`tel:${umkm.phone}`}>
             <Phone className="h-4 w-4 mr-2" />
             Telepon
           </a>
         </Button>
-        <Button size="sm" className="hover:text-green-400" asChild>
-          <a href={`mailto:${umkm.email}`}>
-            <Mail className="h-4 w-4 mr-2" />
-            Email
+        <Button className="hover:text-green-400" size="sm" asChild disbaled={Boolean(umkm.whatsapp)}>
+          <a
+            href={umkm.maps}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <MapPinned className="h-4 w-4 mr-2"/>
+            Maps
           </a>
         </Button>
-        <Button className="hover:text-green-400" size="sm" asChild>
+        <Button className="hover:text-green-400" size="sm" asChild disbaled={Boolean(umkm.whatsapp)}>
           <a
             href={`https://wa.me/${umkm.whatsapp}`}
             target="_blank"
