@@ -9,7 +9,6 @@ import knm from "../assets/logo/knm.png";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import { LucideRoute, Store, Menu, X } from 'lucide-react';
 
-import "boxicons";
 export default function SideBar({ children }) {
   const [visible, setVisible] = useState(false);
   const location = useLocation();

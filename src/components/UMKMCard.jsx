@@ -58,7 +58,7 @@ export function UMKMCard({ umkm }) {
   };
 
   return (
-    <Card className="overflow-x-hidden overflow-y-auto border-gray-200">
+    <Card className="overflow-x-hidden overflow-y-auto border-gray-200 flex flex-col flex justify-between">
       <div className="relative">
         <Suspense fallback={<ImageLoader className="mx-2" />}>
           <AsyncImage
@@ -145,7 +145,7 @@ export function UMKMCard({ umkm }) {
             Maps
           </a>
         </Button>
-        <Button className="hover:text-green-400" size="sm" asChild disbaled={Boolean(umkm.whatsapp)}>
+        <Button onClick={()=>window.open(`https://wa.me/${umkm.whatsapp}`,'_blank')} className="hover:text-green-400" size="sm" asChild disbaled={Boolean(umkm.whatsapp)}>
           <a
             href={`https://wa.me/${umkm.whatsapp}`}
             target="_blank"
