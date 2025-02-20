@@ -10,26 +10,25 @@ import kue_ulang_tahun2 from "../assets/umkm/IbuIyah/kue_ulang_tahun2.jpeg";
 import pastel from "../assets/umkm/IbuIyah/pastel.jpeg";
 import bolu from "../assets/umkm/IbuIyah/bolu.jpeg"
 import tahu from "../assets/umkm/tahu/tahu.jpeg";
-import tahu2 from "../assets/umkm/tahu/tahu2.jpg";
+import tahu2 from "../assets/umkm/tahu/tahu2.webp";
 
 const umkmData = [
+
   {
-    owner: "Bapak Emong",
-    image: [],
-    description:"Menjual Kerupuk Slebung",
-    blok: 1,
+    owner:"Ibu Ira",
+    image:[],
+    description: "Menjual Aneka Sumpia Ebi",
+    blok: 5,
     product: [
-      {
-        name: "Slebung",
-        pict: bapakEmongItem
-      }
+      {name: "Sumpia Ebi",
+      pict: [landingpageSumpiaEbi]}
     ],
-    whatsapp:"",
-    phone:"+6285795537776",
-    email: "",
-    maps: "https://maps.app.goo.gl/HB6auvFuSnTjuXGS7",
-    address: "Leuwikidang, Kasokandel, Majalengka"
-  },{
+    whatsapp: "6282119343322",
+    phone: "6282119343322",
+    maps:"https://maps.app.goo.gl/ETJFx7irWRQNeH1H8",
+    address:"Jl. Arjuna, Leuwikidang, Kec.Kasokandel, Majalengka"
+  },
+  {
     owner: "Ibu Iyah",
     image: [],
     description: "Menjual aneka kue dan kue basah",
@@ -54,8 +53,25 @@ const umkmData = [
     ],
     whatsapp: "+62895807964242",
     phone: "+62895807964242",
-    maps: "",
-    address: ""
+    maps: "Leuwikidang, Kasokandel, Majalengka",
+    address: "Leuwikidang, Kasokandel, Majalengka"
+  },
+  {
+    owner: "Bapak Emong",
+    image: [],
+    description:"Menjual Kerupuk Slebung",
+    blok: 1,
+    product: [
+      {
+        name: "Slebung",
+        pict: bapakEmongItem
+      }
+    ],
+    whatsapp:"",
+    phone:"+6285795537776",
+    email: "",
+    maps: "https://maps.app.goo.gl/HB6auvFuSnTjuXGS7",
+    address: "Leuwikidang, Kasokandel, Majalengka"
   },
   {
     owner: "Pa Nana",
@@ -72,20 +88,6 @@ const umkmData = [
     phone: "",
     maps: "https://maps.app.goo.gl/7xK2fBb5NM5aU7t8A",
     address: "Leuwikidang, Kec.Kasokandel"
-  },
-  {
-    owner:"Ibu Ira",
-    image:[],
-    description: "Menjual Aneka Sumpia Ebi",
-    blok: 5,
-    product: [
-      {name: "Sumpia Ebi",
-      pict: [landingpageSumpiaEbi]}
-    ],
-    whatsapp: "6282119343322",
-    phone: "6282119343322",
-    maps:"https://maps.app.goo.gl/ETJFx7irWRQNeH1H8",
-    address:"Jl. Arjuna, Leuwikidang, Kec.Kasokandel, Majalengka"
   },
   {
     owner: "Bapak Otong",
