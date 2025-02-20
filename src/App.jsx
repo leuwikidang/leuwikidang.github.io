@@ -37,7 +37,6 @@ function App({ Component, pageProps }) {
           <Route path="/" element={<LandingPage />} />
           <Route path="/dashboard" element={<HomePage />}>
             <Route index element={<Dashboard />} />
-            <Route path="knm" element={<></>} />
             <Route path="umkm" element={<UMKMPage />} />
           </Route>
         </Routes>

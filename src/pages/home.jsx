@@ -62,11 +62,6 @@ export default function SideBar({ children }) {
                   >
                     <Store color="gray"/> <span>UMKM</span>
                   </Link>
-                    <Link to="knm" className={`flex flex-row gap-2 p-3 hover:bg-green-200 ${
-                      location.pathname == "/dashboard/knm"
-                        ? "bg-green-200"
-                        : ""
-                    }`}><box-icon name="group" color="gray"></box-icon> <span>KNM</span></Link>
                 </div>
                 {/* <div className="mt-auto">
                                     <hr className="mb-3 mx-3 border-top-1 border-none surface-border" />
