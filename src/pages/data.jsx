@@ -24,6 +24,20 @@ const umkmData = [
     maps: "https://maps.app.goo.gl/HB6auvFuSnTjuXGS7",
     address: "Leuwikidang, Kasokandel, Majalengka"
   },
+  {
+    owner:"Ibu Ira",
+    image:[],
+    description: "Menujal Aneka Sumpia Ebi",
+    blok: 5,
+    product: [
+      {name: "Sumpia Ebi",
+      pict: [landingpageSumpiaEbi]}
+    ],
+    whatsapp: "6282119343322",
+    phone: "6282119343322",
+    maps:"https://maps.app.goo.gl/ETJFx7irWRQNeH1H8",
+    address:"Jl. Arjuna, Leuwikidang, Kec.Kasokandel, Majalengka"
+  }
 ];
 
 const landingPageData = [
