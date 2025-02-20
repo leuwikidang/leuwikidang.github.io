@@ -66,7 +66,7 @@ export default function LandingPage() {
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-4">UMKM Desa Leuwikidang</h1>
             <p className="text-xl md:text-2xl mb-8">Mengembangkan Potensi Lokal, Membangun Ekonomi Desa</p>
-            <Button className="bg-yellow-500 hover:bg-yellow-600 text-green-900" onClick={()=>{navigate('/dashboard')}}>Jelajahi Produk Kami</Button>
+            <Button className="bg-yellow-500 hover:bg-yellow-600 text-green-900" onClick={()=>{navigate('/dashboard/umkm')}}>Jelajahi Produk Kami</Button>
           </div>
         </section>
         <section id="about" className="py-16 bg-white">
