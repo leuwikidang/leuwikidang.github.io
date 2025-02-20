@@ -1,14 +1,9 @@
 import { Package, Users } from "lucide-react"
 import { Helmet } from "react-helmet"
-
+import { resume_umkm } from "./data"
 export default function Dashboard() {
-  const blocks = [
-    { name: "Rahayu", products: 150, entrepreneurs: 30 },
-    { name: "2", products: 200, entrepreneurs: 45 },
-    { name: "3", products: 180, entrepreneurs: 35 },
-    { name: "4", products: 120, entrepreneurs: 25 },
-    { name: "5", products: 250, entrepreneurs: 50 },
-  ]
+  const umkm_obj = resume_umkm()
+  const blocks = Object.keys(umkm_obj).map(name => ({name: name, products: umkm_obj[name].products, entrepreneurs: umkm_obj[name].owners}))
 
   return (
 

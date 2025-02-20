@@ -24,83 +24,6 @@ const umkmData = [
     maps: "https://maps.app.goo.gl/HB6auvFuSnTjuXGS7",
     address: "Leuwikidang, Kasokandel, Majalengka"
   },
-  {
-    owner: "Ibu Wati",
-    image: [siti, sitiItem3],
-    description: "Menjual berbagai macam kue tradisional Indonesia",
-    product: [
-      {
-        name: "Sumpia Ebi",
-        pict: sitiItem,
-      },
-      {
-        name: "Sumpia Pebi",
-        pict: sitiItem2,
-      },
-    ],
-    whatsapp: "+6281234567890",
-    phone: "+6281234567890",
-    email: "siti@example.com",
-    maps: "https://goo.gl/maps/example",
-    address: "Jl. Contoh No. 123, Kota Contoh",
-  },{
-    owner: "ibu Siti",
-    image: [siti, sitiItem3],
-    description: "Menjual berbagai macam kue tradisional Indonesia",
-    product: [
-      {
-        name: "Sumpia Ebi",
-        pict: sitiItem,
-      },
-      {
-        name: "Sumpia ebi",
-        pict: sitiItem2,
-      },
-    ],
-    whatsapp: "+6281234567890",
-    phone: "+6281234567890",
-    email: "siti@example.com",
-    maps: "https://goo.gl/maps/example",
-    address: "Jl. Contoh No. 123, Kota Contoh",
-  },{
-    owner: "Ibu Siti",
-    image: [siti, sitiItem3],
-    description: "Menjual berbagai macam kue tradisional Indonesia",
-    product: [
-      {
-        name: "Sumpia Ebi",
-        pict: sitiItem,
-      },
-      {
-        name: "Sumpia ebi",
-        pict: sitiItem2,
-      },
-    ],
-    whatsapp: "+6281234567890",
-    phone: "+6281234567890",
-    email: "siti@example.com",
-    maps: "https://goo.gl/maps/example",
-    address: "Jl. Contoh No. 123, Kota Contoh",
-  },{
-    owner: "Ibu Siti",
-    image: [siti, sitiItem3],
-    description: "Menjual berbagai macam kue tradisional Indonesia",
-    product: [
-      {
-        name: "Sumpia Ebi",
-        pict: sitiItem,
-      },
-      {
-        name: "Sumpia ebi",
-        pict: sitiItem2,
-      },
-    ],
-    whatsapp: "+6281234567890",
-    phone: "+6281234567890",
-    email: "siti@example.com",
-    maps: "https://goo.gl/maps/example",
-    address: "Jl. Contoh No. 123, Kota Contoh",
-  },
 ];
 
 const landingPageData = [
@@ -120,4 +43,18 @@ function search_umkm(q){
     return umkmData
   }
 }
-export {landingPageData, umkmData, search_umkm};
+function resume_umkm(){
+  let blok = {}
+  umkmData.forEach(umkm=>{
+    if(blok[umkm.blok]){
+      blok[umkm.blok].owners += 1
+      blok[umkm.blok].products += umkm.product.length
+    }else{
+      blok[umkm.blok] = {}
+      blok[umkm.blok].owners = 1
+      blok[umkm.blok].products = umkm.product.length
+    }
+  })
+  return blok
+}
+export {landingPageData, umkmData, search_umkm, resume_umkm};
