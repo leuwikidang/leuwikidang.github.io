@@ -31,6 +31,11 @@ import BellaKesetBantal from "../assets/umkm/RotiBella/keset_bantal.jpeg";
 import BellaSobek from "../assets/umkm/RotiBella/sobek.jpeg";
 import PaMamanCover from "../assets/umkm/PaMaman/cover.jpeg";
 import PamamanGulaCakar from "../assets/umkm/PaMaman/gulacakar.jpeg";
+import OpakCeuAnis from "../assets/umkm/CeuAnis/opak.jpeg";
+import PadadiCover from "../assets/umkm/PaDadi/cover.jpeg";
+import PadadiKonveksi from "../assets/umkm/PaDadi/etalase.jpeg";
+import PadadiKonveksi2 from "../assets/umkm/PaDadi/cover2.jpeg";
+
 
 
 const umkmData = [
@@ -216,7 +221,33 @@ const umkmData = [
     whatsapp: "+6285798308285",
     maps: "https://maps.app.goo.gl/wQzf7dX26Ab4ZQ8R6",
     address: "Leuwikidang, Kec. Kasokandal, Majalengka",
-  },
+  },{
+    owner: "Ceu Anis",
+    description: "Menjual Aneka Kue",
+    blok:4,
+    image: [],
+    blok: 4,
+    product:[{
+      name: "Opak",
+      pic: OpakCeuAnis
+    }],
+    whatsapp:"",
+    phone:"",
+    mpas:"https://maps.app.goo.gl/DcUxkQBsLg7YgFPn9",
+    address:"Leuwikidang, Kec.Kaoskandel, Majalengka"
+  },{
+    owner:"Pa Dadi",
+    description: "Usaha Konveksi",
+    blok: 1,
+    image:[PadadiCover],
+    product:[{
+      name: "Konveksi",
+      pic: PadadiKonveksi2
+    }],
+    whatsapp:"+6289661225705",
+    phone:"+6289661225705",
+    maps:"https://maps.app.goo.gl/AChrzipURio8ZApq6"
+  }
 ];
 
 const landingPageData = [
