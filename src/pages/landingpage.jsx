@@ -1,10 +1,10 @@
 import { Link, Navigate, useNavigate } from "react-router-dom"
 import { Button } from "../components/ButtonDashboard"
 import { AsyncImage } from "loadable-image";
-import { landingPageData } from "./data";
+import { landingPageData, reviewer } from "./data";
 import pelaku_umkm from "../assets/landingpage/pelaku_umkm.jpeg";
 import knm from "../assets/logo/knm.png";
-import uskm from "../assets/logo/uskm.png";
+import uskm from "../assets/logo/uskm_transparent.png";
 import majalengka from "../assets/logo/majalengka.png";
 import { Helmet } from "react-helmet";
 export default function LandingPage() {
@@ -42,19 +42,19 @@ export default function LandingPage() {
           <nav>
             <ul className="flex space-x-4">
               <li>
-                <Link href="#about" className="hover:underline">
+                <a href="#about" className="hover:underline">
                   Tentang
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="#products" className="hover:underline">
+                <a href="#products" className="hover:underline">
                   Produk
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="#contact" className="hover:underline">
+                <a href="#contact" className="hover:underline">
                   Kontak
-                </Link>
+                </a>
               </li>
             </ul>
           </nav>
@@ -64,7 +64,7 @@ export default function LandingPage() {
       <main className="flex-grow">
         <section className="bg-gradient-to-r from-green-600 to-green-400 text-white py-20">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">UMKM Desa Leuwikidang</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4" id="about">UMKM Desa Leuwikidang</h1>
             <p className="text-xl md:text-2xl mb-8">Mengembangkan Potensi Lokal, Membangun Ekonomi Desa</p>
             <Button className="bg-yellow-500 hover:bg-yellow-600 text-green-900" onClick={()=>{navigate('/dashboard/umkm')}}>Jelajahi Produk Kami</Button>
           </div>
@@ -126,13 +126,12 @@ export default function LandingPage() {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-8">Apa Kata Mereka?</h2>
             <div className="grid md:grid-cols-3 gap-8">
-              {[1, 2, 3].map((testimonial) => (
-                <div key={testimonial} className="bg-green-700 p-6 rounded-lg shadow-md">
+              {reviewer.map(({name, text}) => (
+                <div key={name} className="bg-green-700 p-6 rounded-lg shadow-md">
                   <p className="mb-4">
-                    "Produk UMKM Leuwikidang sangat berkualitas dan membanggakan. Saya selalu membeli oleh-oleh dari
-                    sini."
+                    {text}
                   </p>
-                  <p className="font-bold">- Pelanggan {testimonial}</p>
+                  <p className="font-bold">- {name}</p>
                 </div>
               ))}
             </div>
